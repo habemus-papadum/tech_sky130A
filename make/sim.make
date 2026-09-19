@@ -1,3 +1,8 @@
+#- ngspice reads its init file (spice.rc) from here, per technology,
+#- instead of from ~/.spiceinit, which would apply to every technology.
+#- Relative to this file, so it is right from any testbench directory.
+export SPICE_USERINIT_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))../ngspice)
+
 
 
 

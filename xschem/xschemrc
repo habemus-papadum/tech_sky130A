@@ -124,3 +124,7 @@ append XSCHEM_LIBRARY_PATH :../../cpdk/design
 #### default value: empty
 # set xschem_libs {}
 # set noprint_libs {}
+
+#- ngspice (run from the GUI) reads its init file from the technology,
+#- not from ~/.spiceinit. See ../ngspice/spice.rc.
+set ::env(SPICE_USERINIT_DIR) [file normalize $env(PWD)/../tech/ngspice]
